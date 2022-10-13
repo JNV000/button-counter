@@ -1,24 +1,24 @@
 import "./App.css";
-import logo from "./logo.svg";
+import useCount from "./hooks/useCount";
 
 function App() {
+  const [count, increment] = useCount();
+
+  // <> is shorthand for <Fragment>
   return (
-    <div className="text-center">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://beta.reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React (Beta Docs)
-        </a>
-      </header>
-    </div>
+    <>
+      <h1 className="mt-8 text-center uppercase text-red-600">
+        Button Counter
+      </h1>
+      <p className="my-8 text-center text-5xl">{count}</p>
+      <button
+        type="button"
+        className="rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700"
+        onClick={increment}
+      >
+        Click Me!
+      </button>
+    </>
   );
 }
 
