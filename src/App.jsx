@@ -2,7 +2,7 @@ import "./App.css";
 import useCount from "./hooks/useCount";
 
 function App() {
-  const [count, increment] = useCount();
+  const [count, increment, reset] = useCount();
 
   // <> is shorthand for <Fragment>
   return (
@@ -17,6 +17,13 @@ function App() {
         onClick={increment}
       >
         Click Me!
+      </button>
+      <button
+        type="button"
+        className="rounded bg-orange-500 py-2 px-4 font-bold text-black hover:bg-orange-700"
+        onClick={reset}
+      >
+        Reset
       </button>
     </>
   );

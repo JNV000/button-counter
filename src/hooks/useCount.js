@@ -7,7 +7,11 @@ function useCount(initialCount = 0) {
     setCount((prev) => prev + 1);
   };
 
-  return [count, increment];
+  const reset = () => {
+    setCount(initialCount); // set to 0
+  };
+
+  return [count, increment, reset];
 }
 
 export default useCount;
