@@ -22,7 +22,7 @@ function App() {
         Button Counter
       </h1>
 
-      {buttons.map((crntBtn) => ButtonCounter(crntBtn.txt))}
+      {buttons.map((crntBtn) => ButtonCounter(crntBtn))}
     </>
   );
 }

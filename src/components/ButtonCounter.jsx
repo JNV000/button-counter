@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import useCount from "../hooks/useCount";
 
-function ButtonCounter(txt) {
+function ButtonCounter({ txt }) {
   const [count, increment, reset] = useCount();
 
   return (
@@ -23,5 +24,9 @@ function ButtonCounter(txt) {
     </>
   );
 }
+
+ButtonCounter.propTypes = {
+  txt: PropTypes.string.isRequired,
+};
 
 export default ButtonCounter;
