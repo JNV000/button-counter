@@ -22,7 +22,9 @@ function App() {
         Button Counter
       </h1>
 
-      {buttons.map((crntBtn) => ButtonCounter(crntBtn))}
+      {buttons.map((crntBtn) => (
+        <ButtonCounter txt={crntBtn.txt} />
+      ))}
     </>
   );
 }
